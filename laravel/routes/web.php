@@ -8,9 +8,9 @@ Route::get('/contato',[App\Http\Controllers\Contato_Controller::class, 'contato'
 Route::get('/login', function(){return 'Login';})->name('site.login');
 
 Route::prefix('/app')->group(function(){
-Route::get('/clientes', function(){return 'Clientes';})->name('app.clientes');
-Route::get('/fornecedores', function(){return 'Fornecedores';})->name('app.fornecedores');
-Route::get('/produtos', function(){return 'Produtos';})->name('app.produtos');
+  Route::get('/fornecedores', function(){return 'Fornecedores';})->name('app.forncedores');
+  Route::get('/clientes', function(){return 'Clientes';})->name('app.clientes');
+  Route::get('/produtos', function(){return 'Produtos';})->name('app.produtos');
 });
 
 Route::get('/teste/{p1}/{p2}',[\App\Http\Controllers\Teste_Controller::class,'teste'])->name('teste');
